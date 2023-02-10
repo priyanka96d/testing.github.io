@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanning Items</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            display: grid;
+            place-content: center;
+            justify-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(
+            var(--card-gradient),
+            white max(9.5rem, 27vh)
+            );
+            /*background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%);*/
+            
+        }
+        .card-wrapper{
+            display: flex;
+            flex-direction: row;
+            gap:40px;
+       
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+        .card{
+            display: flex;
+            width:500px;
+            height:300px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            box-shadow:  0px 0px 5px 7px gray;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            display: none;
+        }
+        .card:hover .form{
+            display: block;
+        }
+        .card:hover h3{
+            display: none;
+        }
+        h3{
+        font-size: 25px;
+        font-weight: 700;
+        text-shadow: 1px 1px brown;
+        }
+        input, label {
+            display: block;
+
+        }
+        label{
+            font-weight: 800;
+            font-size: 25px;
+            padding: 10px;
+        }
+        input{
+            font-weight: 400;
+            font-size: large;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .btn{
+            float: right;
+            width: 150px;
+            height: 30px;
+            background-color: brown;
+            color: black;
+            border-radius: 5px;
+            border-color: black;
+            margin: 10px;
+            font-size: larger;
+            font-weight: 500;
+        }
+    </style>
+    </head>
+
+<body>
+
+    <header>
+
+    </header>
+    <main>
+        <ul class="card-wrapper">
+            <li class = "card">
+
+                <h3>Search By Item</h3>
+                <form class="form">
+                    <label for="item-name">Item Name</label>
+                    <input id="item-name" type="text">
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </li>
+
+            <li class = "card">
+                <h3>Search By Tote Bin</h3>
+                <form class="form">
+                    <label for="tote-bin">Tote Bin</label>
+                    <input id="tote-bin" type="number">
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </li>
+
+            <li class = "card">
+                <h3>Scanner</h3>
+                <form class="form" >
+                    <label for="item-name">Item Name</label>
+                    <input id="item-name" type="text">
+                </form>
+            </li>
+        </ul>
+    </main>
+    <footer>
+
+    </footer>        
+</body>
+</html>
